@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step by Step Directions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container { /*This class is to create a flexible container that displays its child elemnts side by side */
+            display: flex;
+        }
+        .steps, .ingredients-table {
+            flex: 1;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> | <a href="ingredients.html">Ingredients</a> | <a href="directions.html">Directions</a> | <a href="form.html">Form</a>
+    </nav>
+    <h1>Step by Step Directions to Make Chicken Alfredo!</h1>
+    <hr>
+    <div class="container">
+        <div class="steps">
+            <h2>Directions</h2>
+            <h3>*Follow each step in numerical order*</h3>
+            <br>
+            <ol>
+                <li><em>Cook the pasta in boiling water.</em></li>
+                <li><em>While the pasta is cooking, prepare the chicken by seasoning it and cooking it in a pan.</em></li>
+                <li><em>Once the chicken is cooked, remove it from the pan and set it aside.</em></li>
+                <li><em>In the same pan, make the Alfredo sauce by melting butter, adding minced garlic, pouring in heavy cream, and stirring in grated Parmesan cheese.</em></li>
+                <li><em>Add the cooked pasta and chicken to the sauce, and mix everything together until heated through.</em></li>
+                <li><em>Serve hot, optionally garnished with chopped parsley and additional grated Parmesan cheese.</em></li>
+            </ol>
+        </div>
+        <div class="ingredients-table">
+            <table>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Nutritional Value</th>
+                </tr>
+                <tr>
+                    <td>1/2 lbs Chicken Breast</td>
+                    <td>Protein 100g</td>
+                </tr>
+                <tr>
+                    <td>1/2 cup Parmesan Cheese</td>
+                    <td>Sodium 100mg</td>
+                </tr>
+                <tr>
+                    <td>1/4 cup of olive oil</td>
+                    <td>Calories 100mg</td>
+                </tr>
+                <tr>
+                    <td>1/2 stick of butter</td>
+                    <td>Cholesterol 25mg</td>
+                </tr>
+                <tr>
+                    <td>1 pack of frozen garlic bread</td>
+                    <td>Total Carbohydrate 25g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+</body>
+</html>

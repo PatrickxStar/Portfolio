@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de EchoSlate | EchoSlate</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0; padding: 0;" class="bg-gray-200 dark:bg-gray-800 dark:text-white">
+
+  
+  <header class="bg-gray-800 text-white p-4 fixed w-full z-10 dark:bg-gray-900">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center">
+        
+        <div class="text-2xl font-bold">
+            <a href="/es/" class="text-white hover:text-gray-400"> EchoSlate </a>
+        </div>
+
+        
+        <ul class="flex space-x-4">
+            
+                <li>
+                    <a href="/es/users/" class="text-white hover:text-gray-400"> Usuarios </a>
+                </li>
+            
+                <li>
+                    <a href="/es/upload/" class="text-white hover:text-gray-400"> Subir </a>
+                </li>
+            
+                <li>
+                    <a href="/es/search/" class="text-white hover:text-gray-400"> Buscar </a>
+                </li>
+            
+                <li>
+                    <a href="/es/about/" style="color: #4A90E2;"> Acerca de </a>
+                </li>
+            
+                <li>
+                    <a href="/es/contact/" class="text-white hover:text-gray-400"> Contacto </a>
+                </li>
+            
+        </ul>
+
+        
+        <div class="flex items-center space-x-4">
+            
+            <button id="dark-mode-toggle" class="focus:outline-none" aria-label="Toggle dark mode">
+                <svg id="dark-mode-icon" class="w-6 h-6 text-white dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path id="sun-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m6.364 1.636l-1.414 1.414M22 12h-2 M17.657 17.657l-1.414-1.414M12 22v-2 m-4.95-1.636l1.414-1.414M2 12h2 m1.636-4.95l1.414 1.414" />
+                    <path id="moon-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 0112.21 3 a9 9 0 100 18c4.63 0 8.44-3.5 8.79-7.9z" />
+                </svg>
+            </button>
+
+            
+            <div class="flex space-x-4">
+                
+                <a href="/about/" class="text-white hover:text-gray-400"> English </a>
+
+                
+                <a href="/es/" style="color: #4A90E2;"> Español </a>
+
+                
+                <div class="relative">
+                    <button id="userHeader" class="text-lg font-bold" style="display: none;"></button>
+                    <div id="userDropdown" class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-lg py-2 hidden">
+                        <a href="#" id="logoutButton" class="block px-4 py-2 text-sm hover:bg-gray-100">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const userHeader = document.getElementById("userHeader");
+            const userDropdown = document.getElementById("userDropdown");
+            const logoutButton = document.getElementById("logoutButton");
+            const storedEmail = localStorage.getItem("loggedInEmail");
+
+            
+            if (storedEmail && userHeader) {
+                userHeader.textContent = storedEmail;
+                userHeader.style.display = "block";
+                
+                
+                userHeader.addEventListener("click", () => {
+                    userDropdown.classList.toggle("hidden");
+                });
+                
+                
+                logoutButton.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem("loggedInEmail");
+                    location.reload(); 
+                });
+            } else if (userHeader) {
+                userHeader.style.display = "none";
+            }
+        });
+    </script>
+</header>
+
+  
+  <div style="flex-grow: 1;">
+    <main class="py-16">
+      
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white mb-8">Acerca de EchoSlate</h1>
+  <div class="prose dark:prose-dark mb-8">
+    <h1 class="mt-6 mb-2 text-gray-900 dark:text-gray-100 text-4xl font-bold">
+  Acerca de EchoSlate
+</h1>
+<p>Bienvenido a <strong>EchoSlate</strong> – tu centro de portafolio digital diseñado para mostrar tu trayectoria profesional, proyectos y currículums de manera fluida. Nuestra plataforma empodera a las personas para presentar sus habilidades y logros de forma estructurada y visualmente atractiva.</p>
+<h2 class="mt-6 mb-2 text-gray-900 dark:text-gray-100 text-3xl font-semibold">
+  <strong>Nuestra Misión</strong>
+</h2>
+<p>En EchoSlate, creemos que cada profesional merece una plataforma que refleje con precisión su experiencia y logros. Nuestra misión es proporcionar una solución de portafolio intuitiva y personalizable que destaque tus habilidades únicas, proyectos y hitos de carrera.</p>
+<h2 class="mt-6 mb-2 text-gray-900 dark:text-gray-100 text-3xl font-semibold">
+  <strong>Características</strong>
+</h2>
+<ul>
+<li><strong>Currículums Interactivos:</strong> Crea y gestiona múltiples versiones de tu currículum adaptadas a diferentes roles e industrias.</li>
+<li><strong>Exhibición de Proyectos:</strong> Muestra tus proyectos con descripciones detalladas, tecnologías utilizadas y resultados obtenidos.</li>
+<li><strong>Interfaz Amigable:</strong> Navega y actualiza tu portafolio con facilidad, gracias a nuestro diseño simplificado.</li>
+<li><strong>Soporte Multilingüe:</strong> Llega a una audiencia más amplia presentando tu portafolio en múltiples idiomas.</li>
+</ul>
+<h2 class="mt-6 mb-2 text-gray-900 dark:text-gray-100 text-3xl font-semibold">
+  <strong>Conoce al Equipo</strong>
+</h2>
+<p>EchoSlate es desarrollado por un equipo apasionado de diseñadores, desarrolladores y expertos en seguridad dedicados a ayudar a los profesionales a presentarse de manera efectiva en la era digital.</p>
+<ul>
+<li>
+<p><strong>Dean Mastria</strong> – <em>Scrum Master &amp; Líder de Accesibilidad</em></p>
+<ul>
+<li><strong>Responsabilidades:</strong>
+<ul>
+<li>Supervisar la gestión del proyecto como Scrum Master, asegurando una coordinación fluida y el cumplimiento de los plazos.</li>
+<li>Liderar los estándares ARIA y de accesibilidad para hacer que el sitio sea inclusivo y cumpla con las normativas.</li>
+<li>Realizar revisiones iniciales de código y estructura para mantener la modularidad del código y asegurar su mantenibilidad.</li>
+<li>Implementar prácticas de pruebas continuas y asistir a los miembros del equipo con diversas tareas según sea necesario.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ryan Panagrosso</strong> – <em>Desarrollador Front-End &amp; Diseñador de Bases de Datos</em></p>
+<ul>
+<li><strong>Responsabilidades:</strong>
+<ul>
+<li>Enfocarse en el desarrollo front-end, creando un diseño de sitio web intuitivo y responsive.</li>
+<li>Colaborar con Patrick en el diseño de la estructura de la base de datos, asegurando que los datos estén organizados para una recuperación y almacenamiento óptimos.</li>
+<li>Implementar media queries para un diseño responsive en múltiples tipos de dispositivos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tommy Mulligan</strong> – <em>Líder de Seguridad &amp; Autenticación</em></p>
+<ul>
+<li><strong>Responsabilidades:</strong>
+<ul>
+<li>Desarrollar la sección hero y manejar la funcionalidad de inicio de sesión/contraseña, enfocándose en la autenticación de usuarios.</li>
+<li>Implementar la autenticación de administradores y usuarios, incluyendo el manejo seguro de contraseñas.</li>
+<li>Asegurar el cumplimiento de la seguridad contra XSS y la protección contra otras vulnerabilidades potenciales.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Simon Chang</strong> – <em>Navegación &amp; Pruebas</em></p>
+<ul>
+<li><strong>Responsabilidades:</strong>
+<ul>
+<li>Desarrollar la funcionalidad de carga de archivos, asegurando un manejo fluido y seguro de las cargas de usuarios.</li>
+<li>Implementar la funcionalidad de botones y la navegación del sitio para una experiencia de usuario cohesiva.</li>
+<li>Realizar pruebas para identificar y resolver problemas, asegurando una funcionalidad confiable en todo el sitio.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Patrick Xiong</strong> – <em>Diseñador de Bases de Datos &amp; Revisor Secundario</em></p>
+<ul>
+<li><strong>Responsabilidades:</strong>
+<ul>
+<li>Liderar el soporte multilingüe, implementando opciones de idioma para hacer que el sitio sea accesible a una audiencia diversa.</li>
+<li>Colaborar con Ryan en el diseño de la estructura de la base de datos, asegurando que los datos estén organizados para una recuperación y almacenamiento óptimos.</li>
+<li>Realizar revisiones secundarias de código y estructura, asegurando la calidad y el cumplimiento de los estándares del proyecto.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mt-6 mb-2 text-gray-900 dark:text-gray-100 text-3xl font-semibold">
+  <strong>Participa</strong>
+</h2>
+<p>Ya sea que estés buscando construir tu portafolio, mostrar tus proyectos o colaborar con nosotros, EchoSlate te invita a unirte a nuestra comunidad. <a href="../contact/" class="text-blue-600 hover:text-blue-800 underline">
+    Contáctanos
+  </a>
+   para saber más o <a href="../upload/" class="text-blue-600 hover:text-blue-800 underline">
+    sube tu currículum
+  </a>
+   hoy mismo.</p>
+<hr>
+<p>No dudes en explorar nuestra sección de <a href="../users/" class="text-blue-600 hover:text-blue-800 underline">
+    Usuarios
+  </a>
+   para ver cómo otros presentan sus perfiles profesionales.</p>
+
+  </div>
+
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+  </div>
+</section>
+
+    </main>
+  </div>
+
+  
+  <footer style="width: 100%; background-color: #111827; color: #9ca3af; text-align: center; padding: 2rem; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <p>© 2024 EchoSlate. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+ 
+
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9w_PQS8HnG4q4PjW8fQN1isBzftDeZBE",
+      authDomain: "testechoslate.firebaseapp.com",
+      projectId: "testechoslate",
+      storageBucket: "testechoslate.appspot.com",
+      messagingSenderId: "987831629951",
+      appId: "1:987831629951:web:f37aeba48e5fc10b6ce74a"
+    };
+    const app = initializeApp(firebaseConfig);
+    console.log("Firebase initialized");
+  </script>
+
+  
+  <script type="module" src="/js/auth.js"></script>
+
+  
+  <script src="/js/dark-mode-toggle.js"></script>
+
+</body>
+</html>

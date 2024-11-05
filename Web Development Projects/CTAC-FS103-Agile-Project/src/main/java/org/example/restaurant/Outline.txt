@@ -1,0 +1,115 @@
+Current state of things giving a breakdown of what each package does:
+
+1. GUI Components (Swing)
+- LoginFrame.java: For the login interface.
+- MainFrame.java: Main application window, with menus to navigate between different functionalities.
+- MenuManagementPanel.java: Interface to manage menu items.
+- OrderProcessingPanel.java: Interface for processing orders.
+- TableManagementPanel.java: Interface for managing tables.
+- InventoryManagementPanel.java: Interface for managing inventory.
+- SalesReportPanel.java: Interface for viewing and exporting sales reports.
+
+
+2. Model Classes
+- User.java: Represents users with attributes like username, passwordHash, role.
+- MenuItem.java: Represents a menu item with properties like name, description, price, etc.
+- Order.java: Represents an order with attributes like order ID, list of items, total price, status.
+- Table.java: Represents a table with properties like table ID, size, status.
+- InventoryItem.java: Represents an inventory item with properties like ingredient name, quantity, etc.
+
+
+- 3. Service Classes
+- UserService.java: Handles user login, authentication, and role management.
+- MenuService.java: Manages the menu, including adding, removing, and updating items.
+- OrderService.java: Handles order processing, updating order statuses, and calculating total prices.
+- TableService.java: Manages table assignments and statuses.
+- InventoryService.java: Tracks ingredient usage, updates quantities, and alerts when running low.
+- SalesReportService.java: Generates and exports sales reports.
+
+
+4. Controller Classes
+- LoginController.java: Handles login logic.
+- MenuController.java: Connects the GUI with the MenuService.
+- OrderController.java: Connects the GUI with the OrderService.
+- TableController.java: Connects the GUI with the TableService.
+- InventoryController.java: Connects the GUI with the InventoryService.
+- SalesReportController.java: Connects the GUI with the SalesReportService.
+
+
+5. Utilities
+- FileUtil.java: Utility class for file handling (loading and saving data).
+- HashUtil.java: Utility class for password hashing and verification.
+
+
+6. Testing
+- Write unit tests for the service layer using JUnit and Mockito.
+- Write integration tests for file handling, data persistence, and overall system workflows.
+
+
+7. Execution
+- Implement the Main class to start the application by showing the LoginFrame.
+- Ensure data persistence by loading data from files at startup and saving data on exit.
+
+
+8. File I/O
+- Save user data, menu items, orders, and inventory data in separate files (e.g., users.dat, menu.dat, etc.).
+- Ensure that changes to these files are atomic to avoid data corruption.
+
+
+
+Current Roadmap:
+
+1. Implement the Utility Classes
+- HashUtil.java:
+Implement password hashing using BCrypt.    ✔
+Implement password validation.              ✔
+- FileUtil.java:
+Implement methods to save and load data to/from files. ✔
+Start with simple text files and expand to more structured formats if needed. ✔
+
+2. Implement the model Package
+Implement getters and setters for each model class (User.java, MenuItem.java, etc.). ✔
+Ensure that each model class accurately represents the data it needs to store.      ✔
+
+3. Implement the service Package
+Start with UserService.java:
+Implement user login, registration, and role-based access control.  ✔
+Add methods to load and save users to a file.                       ✔
+Move on to MenuService.java:
+Implement methods to add, remove, and edit menu items.
+Implement file I/O for menu persistence.
+Implement OrderService.java, TableService.java, InventoryService.java, and SalesReportService.java in a similar fashion.
+
+4. Implement the controller Package
+Start with LoginController.java:
+Link the UserService with the LoginFrame. ✔
+Implement the logic for login validation and role management. ✔
+Continue with controllers for menu, order, table, inventory, and sales report management:
+Implement the business logic that connects the GUI with the underlying services.
+
+5. Develop the GUI (gui Package)
+Start with LoginFrame.java:
+Design the login screen and ensure it works with the LoginController.
+Implement validation and error-handling for login attempts.
+Move on to the MainFrame.java and its panels:
+Design the main application window with a menu bar and panels for each feature.
+Ensure that each panel interacts with its respective controller.
+
+6. Integrate the Components
+Integrate all components in the Main.java class.
+Ensure that after logging in, users are directed to the correct view based on their role.
+Make sure all features (menu management, order processing, etc.) are accessible and functional from the main application window.
+
+7. Test the Application
+Write unit tests for utility classes, services, and controllers.
+Perform manual testing of the GUI to ensure all features work as expected.
+Test file persistence (saving/loading data) and ensure that data is correctly retained between sessions.
+
+8. Refine and Optimize
+Optimize code for performance, especially in file I/O and GUI responsiveness.
+Refactor code for better readability and maintainability.
+Handle edge cases and errors gracefully (e.g., invalid inputs, file access issues).
+
+9. Documentation
+Write documentation for each class and method, explaining what it does and how it works.
+Create user manuals or guides if necessary, explaining how to use the system.

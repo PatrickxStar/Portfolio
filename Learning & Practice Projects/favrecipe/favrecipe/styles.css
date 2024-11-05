@@ -1,0 +1,101 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
+
+nav { /* Styling the navigation bar */
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a:hover { /* nav a is a style to anchor elements within a navigation bar */
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(212, 255, 0);
+}
+
+h1 {
+    color: #200dea;
+    background-color: rgb(212, 255, 0);
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p, ul, ol {
+    font-size: 18px;
+    color: #2f00ff;
+    text-align: center;
+    margin: 20px;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+.homecoming {
+    background-color: rgb(212, 255, 0);
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#img {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #img { 
+        width: 50%;
+    }
+    
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #0fa3e3;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0 5px;
+}
