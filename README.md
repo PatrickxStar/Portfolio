@@ -57,7 +57,7 @@ A project that explores web development skills, focusing on creating a responsiv
 ---
 
 ## How to Use This Repository
-Each folder contains a standalone project with its own `README.md` (where applicable) that provides more detailed information on how to set up and run the project. To explore a project, navigate to the relevant folder and follow the instructions provided.
+Each folder contains a standalone project with its own `README.md` that provides more detailed information on how to set up and run the project. To explore a project, navigate to the relevant folder and follow the instructions provided.
 
 ---
 
@@ -65,7 +65,7 @@ Each folder contains a standalone project with its own `README.md` (where applic
 If you have any questions about these projects or want to discuss potential collaborations, feel free to reach out!
 
 - GitHub: [PatrickxStar](https://github.com/PatrickxStar)
-- Email: [Your Email Address]
+- Email: patrickxiong0825@gmail.com
 
 ---
 
